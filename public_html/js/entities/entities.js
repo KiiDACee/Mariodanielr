@@ -26,10 +26,39 @@ game.PlayerEntity = me.Entity.extend({
     }else{
         this.body.vel.x = 0;
     }
-     this.body.update(delta);
-     this._super(me.Entity, "update", [delta])
+     
+     
+     
+     this._super(me.Entity, "update", [delta]);
      return true;
  }  
     
     
 });
+
+game.LevelTrigger() = me.Entity.extend({
+    init: function (x, y, settings)
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
