@@ -12,7 +12,11 @@ game.PlayerEntity = me.Entity.extend({
              }
         }]);
         
-      
+        this.renderable.addAnimation("idle", [4]);
+        this.renderable.addAnimation("smallWalk", [9, 10, 11, 12, 13, 14], 80);
+        
+        this.renderable.setCurrentAnimation("idle");
+        
       this.body.setVelocity(5, 20);
     },
     
@@ -23,6 +27,7 @@ game.PlayerEntity = me.Entity.extend({
         this.body.vel.x = 0;
     }
      this.body.update(delta);
+     this._super(me.Entity, "update", [delta])
      return true;
  }  
     
